@@ -46,7 +46,7 @@ export default function Admin() {
   return (
     <>
       {isAllowd == false ? (
-        <ErrorImage />
+        navigate("/error")
       ) : (
         <>
           <AppBar>
