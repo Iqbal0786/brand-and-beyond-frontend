@@ -1,8 +1,9 @@
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import React, { useState } from "react";
 import axios from "axios"
 import "../styles/style.css";
 export default function Login() {
+  const navigate= useNavigate();
     const [userInfo,setUserInfo]=useState({
         email:"",
         password:"",
@@ -26,6 +27,7 @@ export default function Login() {
           axios.post("http://localhost:7777/login",{ email:userInfo.email, password:userInfo.password}).then((res)=>{
             sessionStorage.setItem("loggedUser" , JSON.stringify(res.data))
             alert("Successfully Logged in !!");
+             setTimeout(()=>{navigate("/admin")},3000)
             console.log(res.data)
            }).catch((err)=>{
              alert("Something went wrong !!")
