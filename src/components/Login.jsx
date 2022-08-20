@@ -30,7 +30,7 @@ export default function Login() {
              setTimeout(()=>{navigate("/admin")},3000)
             console.log(res.data)
            }).catch((err)=>{
-             alert("Something went wrong !!")
+             alert("Please check your email or password  !!")
            })
          }
     }
