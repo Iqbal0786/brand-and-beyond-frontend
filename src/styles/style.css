@@ -1,0 +1,112 @@
+
+#parentDiv{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    gap: 15px;
+    /* padding: 1px; */
+
+}
+#parentDiv>#leftBox{
+    width: 50%;
+    height: 100%;
+
+}
+#parentDiv>#rightBox{
+    width: 50%;
+    height: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    text-align: center;
+}
+#inputBox{
+    width: 50%;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* border: 1px solid red; */
+}
+input{
+    padding: 10px 70px;
+    margin-top: 10px;
+    background-color: rgb(223, 221, 221);
+    border-radius: 5px;
+    border: none;
+}
+i{
+    cursor: pointer;
+    color: rgb(118, 115, 115);
+}
+button{
+   background-color:  #98E1F2;
+   width: 250px;
+   height: 40px;
+   color: white;
+   font-weight: bold;
+   border-radius: 10px;
+   border: none;
+   cursor: pointer;
+}
+#forgetTitle{
+    width: 90%;
+    /* margin-Left: "-49%"; */
+    
+    /* border: 1px solid red; */
+    position: relative;
+    margin-bottom: 30px;
+   
+ }
+ #forgetTitle >h4{
+    position: absolute;
+    margin-Top: "-6px";
+    font-family: sans-serif;
+    font-size: 14px;
+    left: 0px;
+ }
+
+@media only screen and (max-width: 600px) {
+     #parentDiv{
+        height: 800px;
+        flex-direction: column;
+        align-content: center;
+        gap: 10px;
+       padding: 10% 0% 10px 10px;
+       position: relative;
+       /* z-index: -1; */
+       margin-left: -10px;
+       margin-top: -5%;
+     }
+
+     #parentDiv> #leftBox{
+       z-index: 1;
+       margin-top: -20px;
+        width: 100%;
+        height: 400px;
+     }
+     #parentDiv> #rightBox{
+        position: absolute;
+        top: 42%;
+       z-index: 2;
+       background-color: white;
+         border-radius: 10%;
+        width: 80%;
+        height: 450px;
+        margin-left: 30px;
+      /* border: 1px solid blue; */
+
+     }
+     #inputBox{
+       width: 90%;
+         
+     }
+     input{
+     
+        padding: 15px 40px;
+        
+     }
+      
+  }
