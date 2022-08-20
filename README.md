@@ -1,5 +1,6 @@
 # Getting Started with Create React App
 ## For Demo  , admin can login using email admin@gmail.com and password admin
+## Backend Repo Link : https://github.com/Iqbal0786/brand-and-beyond-backend
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
