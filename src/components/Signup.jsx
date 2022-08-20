@@ -1,6 +1,7 @@
  import {Link, useNavigate} from "react-router-dom"
 import React, { useState } from "react";
 import "../styles/style.css";
+import axios from "axios";
 export default function Signup() {
   const navigate=useNavigate()
     const [userInfo,setUserInfo]=useState({
@@ -32,7 +33,11 @@ export default function Signup() {
             alert("password does not matched !!")
          }
          else {
-            
+             axios.post("http://localhost:7777/register",{ email:userInfo.email, password:userInfo.password}).then((res)=>{
+              alert("Registered Successfully !!")
+             }).catch((err)=>{
+               alert("Something went wrong !!")
+             })
          }
     }
     console.log(userInfo)
