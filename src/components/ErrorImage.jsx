@@ -6,13 +6,13 @@ export default function ErrorImage() {
     const navigate= useNavigate()
   return (
     <Box
-    sx={{width:"80%" , height:"500px" , margin:"auto" , marginTop:"80px" , position:"relative"}}
+    sx={{width:"80%" , height:"40%" , margin:"auto" , marginTop:"80px" , position:"relative" , borderRadius:"10%"}}
     
     >
-        <Typography sx={{color:"gray", fontWeight:"bold"}}>
+        <Typography sx={{color:"gray", fontWeight:"bold" , textAlign:"center" , fontSize:"2rem"}}>
             Warning!! You are not allowed to move ahead.
         </Typography>
-        <Typography sx={{color:"blue" , fontSize:"19px" , fontStyle:"italic" , cursor:"pointer"}}
+        <Typography sx={{color:"blue" , fontSize:"19px" , fontStyle:"italic" , cursor:"pointer" }}
         onClick={()=>{
            navigate("/login")
         }}
@@ -21,6 +21,6 @@ export default function ErrorImage() {
         </Typography>
 
      
-    <img src='https://freefrontend.com/assets/img/403-forbidden-html-templates/403-Forbidden.gif' width={"100%"} height={"100%"} alt='Error Image '/></Box>
+    <img src='https://freefrontend.com/assets/img/403-forbidden-html-templates/403-Forbidden.gif' width={"100%"} height={"100%"} alt='Error Image ' /></Box>
   )
 }
