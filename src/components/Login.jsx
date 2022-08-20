@@ -1,8 +1,6 @@
 import {Link} from "react-router-dom"
 import React, { useState } from "react";
 import "../styles/style.css";
-import {signInWithEmailAndPassword} from "firebase/auth"
-import {auth} from "../firebase.config"
 export default function Login() {
     const [userInfo,setUserInfo]=useState({
         email:"",
@@ -24,13 +22,7 @@ export default function Login() {
             alert("please enter password")
          }
          else {
-             signInWithEmailAndPassword(auth,userInfo.email,userInfo.password).then((user)=>{
-                alert(`Successfully logged in by ${user.user.email}`);
-                console.log(user)
-             }).catch((err)=>{
-              alert("Please check your email or password!!")
-                console.log(err.message)
-             })
+             
          }
     }
     console.log(userInfo)
@@ -64,7 +56,7 @@ export default function Login() {
                 class="fa fa-envelope icon"
                 style={{ position: "absolute", top: "40%", left: "10%" }}
               ></i>{" "}
-              <input type={"email"} placeholder="Email or Phone"  name="email" onChange={formHandler}/>
+              <input type={"email"} placeholder="Email"  name="email" onChange={formHandler}/>
             </div>
             <div style={{ width: "100%"  , position:"relative"}}>
               <i

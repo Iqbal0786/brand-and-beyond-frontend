@@ -1,8 +1,6 @@
  import {Link, useNavigate} from "react-router-dom"
 import React, { useState } from "react";
 import "../styles/style.css";
-import {createUserWithEmailAndPassword} from "firebase/auth"
-import {auth} from "../firebase.config"
 export default function Signup() {
   const navigate=useNavigate()
     const [userInfo,setUserInfo]=useState({
@@ -34,13 +32,7 @@ export default function Signup() {
             alert("password does not matched !!")
          }
          else {
-             createUserWithEmailAndPassword(auth,userInfo.email,userInfo.password).then((user)=>{
-                alert("Registered Successfully");
-                setTimeout(()=>{navigate("/login")},3000)
-                console.log(user)
-             }).catch((err)=>{
-                console.log(err.message)
-             })
+            
          }
     }
     console.log(userInfo)
@@ -57,7 +49,7 @@ export default function Signup() {
 
         <div id="rightBox">
           <div id="HeadingDiv">
-            <h1 style={{ marginBottom: "3px" ,marginTop:"17px" , fontSize:"22px" }}>Welcome Back</h1>
+            <h1 style={{ marginBottom: "3px" ,marginTop:"17px" , fontSize:"22px" }}>Welcome</h1>
             <h5
               style={{
                 color: "#98E1F2",
@@ -74,7 +66,7 @@ export default function Signup() {
                 class="fa fa-envelope icon"
                 style={{ position: "absolute", top: "40%", left: "10%" }}
               ></i>{" "}
-              <input type={"email"} placeholder="Email or Phone"  name="email" onChange={formHandler}/>
+              <input type={"email"} placeholder="Email address"  name="email" onChange={formHandler}/>
             </div>
             <div style={{ width: "100%"  , position:"relative"}}>
               <i
