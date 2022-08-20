@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom"
 import React, { useState } from "react";
+import axios from "axios"
 import "../styles/style.css";
 export default function Login() {
     const [userInfo,setUserInfo]=useState({
@@ -22,7 +23,13 @@ export default function Login() {
             alert("please enter password")
          }
          else {
-             
+          axios.post("http://localhost:7777/login",{ email:userInfo.email, password:userInfo.password}).then((res)=>{
+            sessionStorage.setItem("loggedUser" , JSON.stringify(res.data))
+            alert("Successfully Logged in !!");
+            console.log(res.data)
+           }).catch((err)=>{
+             alert("Something went wrong !!")
+           })
          }
     }
     console.log(userInfo)
