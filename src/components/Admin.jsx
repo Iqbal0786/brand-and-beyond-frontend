@@ -1,9 +1,10 @@
 import { AppBar, Toolbar, Typography } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import ErrorImage from "./ErrorImage";
-// import ProductTable from './ProductTable';
+import UsersTable from "./UsersTable";
+
 
 export default function Admin() {
   const [isAllowd, setIsAllowd] = useState(true);
@@ -80,7 +81,7 @@ export default function Admin() {
           >
             List of Registered Users 
           </Typography>
-          {/* <ProductTable data={productData}/> */}
+          <UsersTable data={registeredUser}/>
         </>
       )}
     </>
