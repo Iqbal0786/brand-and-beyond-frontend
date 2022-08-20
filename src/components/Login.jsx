@@ -24,7 +24,7 @@ export default function Login() {
             alert("please enter password")
          }
          else {
-          axios.post("http://localhost:7777/login",{ email:userInfo.email, password:userInfo.password}).then((res)=>{
+          axios.post("https://brand-and-beyond-backend.herokuapp.com/login",{ email:userInfo.email, password:userInfo.password}).then((res)=>{
             sessionStorage.setItem("loggedUser" , JSON.stringify(res.data))
             alert("Successfully Logged in !!");
              setTimeout(()=>{navigate("/admin")},3000)

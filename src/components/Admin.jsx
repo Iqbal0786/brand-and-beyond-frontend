@@ -28,7 +28,7 @@ export default function Admin() {
     //         console.log(err.message);
     //       });
     //   }
-    axios.get("http://localhost:7777/users" ,{ headers: {"Authorization" : `Bearer ${userdata.token}`} }).then((res)=>{
+    axios.get("https://brand-and-beyond-backend.herokuapp.com/users" ,{ headers: {"Authorization" : `Bearer ${userdata.token}`} }).then((res)=>{
         console.log(res)
         setRegisteredUser([...res.data])
    }).catch((err)=>{

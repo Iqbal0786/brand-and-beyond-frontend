@@ -33,8 +33,9 @@ export default function Signup() {
             alert("password does not matched !!")
          }
          else {
-             axios.post("http://localhost:7777/register",{ email:userInfo.email, password:userInfo.password}).then((res)=>{
+             axios.post("https://brand-and-beyond-backend.herokuapp.com/register",{ email:userInfo.email, password:userInfo.password}).then((res)=>{
               alert("Registered Successfully !!")
+              navigate("/login")
              }).catch((err)=>{
                alert("Something went wrong !!")
              })
