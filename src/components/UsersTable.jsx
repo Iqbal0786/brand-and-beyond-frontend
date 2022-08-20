@@ -28,12 +28,12 @@ export default function UsersTable({data}) {
     <Paper sx={{ width: '90%', overflow: 'hidden'  ,margin:"auto", marginTop:"40px", marginBottom:"50px"}}>
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">
-          <TableHead>
+          <TableHead >
             <TableRow>
-              <TableCell>Email Address</TableCell>
-              <TableCell>Role Type </TableCell>
-              <TableCell>Registration Date </TableCell>
-              <TableCell>Registration Time </TableCell>
+              <TableCell sx={{fontWeight:"bolder" ,fontFamily:"sans-serif" , fontSize:"14px"}}>Email Address</TableCell>
+              <TableCell sx={{fontWeight:"bolder" ,fontFamily:"sans-serif" , fontSize:"14px"}}>Role Type </TableCell>
+              <TableCell sx={{fontWeight:"bolder" ,fontFamily:"sans-serif" , fontSize:"14px"}}>Registration Date </TableCell>
+              <TableCell sx={{fontWeight:"bolder" ,fontFamily:"sans-serif" , fontSize:"14px"}}>Registration Time </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
