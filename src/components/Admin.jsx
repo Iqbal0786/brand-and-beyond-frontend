@@ -13,21 +13,6 @@ export default function Admin() {
   useEffect(() => {
     let userdata = JSON.parse(sessionStorage.getItem("loggedUser"));
     if (userdata) {
-    //   let isUser = userdata.user.roles?.includes("user");
-    //   if (isUser) {
-    //     setIsAllowd(false);
-    //   } else {
-    //     axios
-    //       .get("http://localhost:7777/users", {
-    //         headers: { Authorization: `Bearer ${userdata.token}` },
-    //       })
-    //       .then((res) => {
-    //         setProductData([...res.data]);
-    //       })
-    //       .catch((err) => {
-    //         console.log(err.message);
-    //       });
-    //   }
     axios.get("https://brand-and-beyond-backend.herokuapp.com/users" ,{ headers: {"Authorization" : `Bearer ${userdata.token}`} }).then((res)=>{
         console.log(res)
         setRegisteredUser([...res.data])
@@ -57,7 +42,7 @@ export default function Admin() {
                 margin: "10px",
               }}
             >
-              <Typography>Welcome Admin Dashboard</Typography>
+              <Typography>Welcome To  Admin Dashboard </Typography>
               <Typography
                 sx={{ cursor: "pointer" }}
                 onClick={() => {
